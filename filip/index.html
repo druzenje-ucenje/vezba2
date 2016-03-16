@@ -15,33 +15,107 @@
 <body>
     Domaci zadatak.
 
-    <img src="" alt="opis slike">
-    <img src="" alt="opis slike">
-    <img src="" alt="opis slike">
+    <img src="http://static.comicvine.com/uploads/original/7/74477/4224945-roaring_lion.jpg" alt="opis prve">
+    <img src="http://i1228.photobucket.com/albums/ee443/iri1ui0001/JCGraphicsLionBody205-24-2011.jpg" alt="Neki lav - grdan i ruzan sav">
 
     <hr>
 
     <h2>Headeri za css:</h2>
     <h4>request headeri:</h4>
-    <p>podaci</p>
+    <pre>
+        GET /bootstrap/3.3.6/css/bootstrap.min.css HTTP/1.1
+        Host: maxcdn.bootstrapcdn.com
+        Connection: keep-alive
+        Cache-Control: max-age=0
+        Accept: text/css,*/*;q=0.1
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+        Accept-Encoding: gzip, deflate, sdch
+        Accept-Language: en-US,en;q=0.8,hr;q=0.6,sr;q=0.4,nb;q=0.2,bs;q=0.2,sq;q=0.2
+        If-None-Match: W/"2f624089c65f12185e79925bc5a7fc42"
+        If-Modified-Since: Tue, 24 Nov 2015 19:49:46 GMT
+    </pre>
+
     <h4>response headeri:</h4>
-    <p>podaci</p>
+    <pre>
+        HTTP/1.1 304 Not Modified
+        Date: Wed, 16 Mar 2016 04:23:23 GMT
+        Connection: keep-alive
+        Last-Modified: Tue, 24 Nov 2015 19:49:46 GMT
+        ETag: "2f624089c65f12185e79925bc5a7fc42"
+        Server: NetDNA-cache/2.2
+        Expires: Sat, 11 Mar 2017 04:23:23 GMT
+        Cache-Control: max-age=31104000
+        Vary: Accept-Encoding
+        Access-Control-Allow-Origin: *
+        X-Hello-Human: You should work for us! Email: jdorfman+theheader@maxcdn.com or @MaxCDNDeveloper on Twitter
+        X-Cache: HIT
+    </pre>
 
     <hr>
 
     <h2>Headeri za slike</h2>
     <h4>request headeri:</h4>
-    <p>podaci</p>
+    <pre>
+        GET /uploads/original/7/74477/4224945-roaring_lion.jpg HTTP/1.1
+        Host: static.comicvine.com
+        Connection: keep-alive
+        Pragma: no-cache
+        Cache-Control: max-age=0
+        Accept: image/webp,image/*,*/*;q=0.8
+        If-None-Match: "21b08dd7dab72ecc7d2a43339940085f"
+        If-Modified-Since: Mon, 17 Nov 2014 20:25:19 GMT
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+        Accept-Encoding: gzip, deflate, sdch
+        Accept-Language: en-US,en;q=0.8,hr;q=0.6,sr;q=0.4,nb;q=0.2,bs;q=0.2,sq;q=0.2
+    </pre>
+
     <h4>response headeri:</h4>
-    <p>podaci</p>
+    <pre>
+        HTTP/1.1 304 Not Modified
+        Content-Type: image/jpeg
+        Last-Modified: Mon, 17 Nov 2014 20:25:19 GMT
+        ETag: "21b08dd7dab72ecc7d2a43339940085f"
+        Date: Wed, 16 Mar 2016 04:24:44 GMT
+        Connection: keep-alive
+        access-control-allow-origin: *
+    </pre>
 
     <hr>
 
     <h2>headeri za js</h2>
     <h4>request headeri:</h4>
-    <p>podaci</p>
+    <pre>
+        GET /jquery-2.2.1.min.js HTTP/1.1
+        Host: code.jquery.com
+        Connection: keep-alive
+        Cache-Control: max-age=0
+        Accept: */*
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+        Accept-Encoding: gzip, deflate, sdch
+        Accept-Language: en-US,en;q=0.8,hr;q=0.6,sr;q=0.4,nb;q=0.2,bs;q=0.2,sq;q=0.2
+        Cookie: __cfduid=df02f8cf733495a8a397a8102334d79781412474624296; __utma=160157602.1488703407.1406225545.1434985366.1437160664.11
+        If-None-Match: W/"56cb5d7c-14e7e"
+        If-Modified-Since: Mon, 22 Feb 2016 19:11:56 GMT
+    </pre>
+
     <h4>response headeri:</h4>
-    <p>podaci</p>
+    <pre>
+        HTTP/1.1 200 OK
+        Date: Wed, 16 Mar 2016 04:25:04 GMT
+        Last-Modified: Mon, 22 Feb 2016 19:11:56 GMT
+        Vary: Accept-Encoding
+        ETag: "56cb5d7c-14e7e"
+        Expires: Thu, 31 Dec 2037 23:55:55 GMT
+        Cache-Control: max-age=315360000, public
+        Access-Control-Allow-Origin: *
+        Server: NetDNA-cache/2.2
+        Content-Type: application/javascript; charset=utf-8
+        Content-Encoding: gzip
+        X-Cache: HIT
+        Content-Length: 34929
+        Connection: keep-alive
+        Accept-Ranges: bytes
+    </pre>
 
 
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
