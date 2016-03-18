@@ -1,0 +1,147 @@
+
+
+.zero {
+    
+    
+    width: 100%;
+    height: 400px;
+}  
+
+
+.one {
+           height: 100%;
+            width: 300px;
+            border: 3px solid green;
+            overflow: hidden;
+            z-index: 100;
+            position: relative;
+        }
+        
+        .one img {
+            position: absolute;
+            top: 0;
+            transition: all 2s;
+            width: 100%;
+        }
+        
+        .wrap {        
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 52, 52);
+            opacity: 0;
+            z-index: 10;
+            transition: all 0.4s;
+        }
+        
+        .one:hover .wrap {
+            opacity: 0.5;
+        }
+        
+        .tekst {
+            width: 100%;
+            font-size: 25px;
+            background-color: aqua;
+            padding: 10px;
+            opacity: 1;
+            position: absolute;
+            bottom: 10px;
+            right: 500px;
+            margin: 0 auto;
+            z-index: 11;
+            transition: all 2s;
+        }
+        
+        .one:hover .tekst {
+            opacity: 0.7;
+           right: 0;
+        }
+        
+        .one:hover img {
+            
+            transform: scale(1.4)
+        }
+
+.two {
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    
+    margin-left: 300px;
+  
+   
+}
+
+
+
+.nav {
+    
+    margin: 0 auto;
+    width: 30%;
+}
+
+
+.two ul {
+    padding: 0;
+
+}
+.two li {
+    
+    margin: 0;
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+}.two li a {
+    
+    border: 3px solid green;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border: 1px solid green;
+  
+   
+}
+
+.hover {
+    transition: all .2s;
+ box-shadow: 0;   
+}
+
+.hover:hover {
+    -moz-box-shadow:10px 10px 5px aqua;
+-webkit-box-shadow:10px 10px 5px aqua;
+box-shadow:10px 10px 5px aqua;
+    
+}
+
+@media only screen and (max-width : 700px) { 
+
+.two {
+    font-size: 20px;
+    margin-left: 150px;
+    }
+.one {
+    width: 150px;
+    height: 65%;
+}
+    .nav {
+    
+   
+    width: 90%;
+}
+
+}
+
+.info {
+    
+    background-color: #e8e8e8;
+}
+
+.hov {
+    
+    color: red;
+}
+
