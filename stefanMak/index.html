@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Vezba 2 - Stefan Maksimović</title>
+    <meta name="author" content="Stefan Maksimovic">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        img {
+            margin: 10px auto;
+			height: 165px;
+			width: 262px;
+        }
+		.b {
+			color: red;
+			display: inline;
+		}
+		.pics {
+			display: inline-block;
+		}
+		#outer{
+			text-align:center;
+		}
+    </style>
+</head>
+
+<body>
+    Domaci zadatak.
+
+	<div id="outer">
+		<div class="pics">
+			<p >Faze učitavanja za bootstrap css fajl</p>
+			<img src="./bootstrap.png" alt="opis slike">
+		</div>
+		<div class="pics">
+			<p >Faze učitavanja za jquery fajl</p>
+			<img src="./jquery.png" alt="opis slike">
+		</div>
+		<div class="pics">
+			<p >Faze učitavanja eksterne slike</p>
+			<img src="./external.png" alt="opis slike">
+		</div>
+		<div class="pics">
+			<p >Eksterna slika</p>
+			<img src="http://i.dailymail.co.uk/i/pix/2016/01/11/10/2FEB003300000578-3393660-image-a-1_1452509019365.jpg" alt="opis slike">
+		</div>
+		<p>
+			Primetimo kako za eksternu sliku nema čekanja na SSL, pošto se ne
+			učitava preko https-a
+		</p>
+	</div>
+
+
+    <hr>
+
+    <h2>Headeri za css:</h2>
+    <h4>request headeri:</h4>
+    <pre>
+	GET /bootstrap/3.3.6/css/bootstrap.min.css HTTP/1.1
+	Host: maxcdn.bootstrapcdn.com
+	Connection: keep-alive
+	Accept: text/css,*/*;q=0.1
+	User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+	Accept-Encoding: gzip, deflate, sdch
+	Accept-Language: en-US,en;q=0.8,hr;q=0.6,ja;q=0.4,sr;q=0.2
+	</pre>
+    <h4>response headeri:</h4>
+    <pre>
+	HTTP/1.1 200 OK
+	Date: Sat, 19 Mar 2016 14:40:22 GMT
+	Content-Type: text/css
+	Transfer-Encoding: chunked
+	Connection: keep-alive
+	Last-Modified: Tue, 24 Nov 2015 19:49:46 GMT
+	ETag: W/"2f624089c65f12185e79925bc5a7fc42"
+	Server: NetDNA-cache/2.2
+	Expires: Tue, 14 Mar 2017 14:40:22 GMT
+	Cache-Control: max-age=31104000
+	Vary: Accept-Encoding
+	<p class="b">Access-Control-Allow-Origin: *</p>
+	X-Hello-Human: You should work for us! Email: jdorfman+theheader@maxcdn.com or @MaxCDNDeveloper on Twitter
+	X-Cache: HIT
+	Content-Encoding: gzip
+	</pre>
+
+    <hr>
+
+    <h2>Headeri za slike</h2>
+    <h4>request headeri:</h4>
+    <pre>
+	GET /i/pix/2016/01/11/10/2FEB003300000578-3393660-image-a-1_1452509019365.jpg HTTP/1.1
+	Host: i.dailymail.co.uk
+	Connection: keep-alive
+	Cache-Control: max-age=0
+	Accept: image/webp,image/*,*/*;q=0.8
+	User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+	Accept-Encoding: gzip, deflate, sdch
+	Accept-Language: en-US,en;q=0.8,hr;q=0.6,ja;q=0.4,sr;q=0.2
+	</pre>
+    <h4>response headeri:</h4>
+    <pre>
+	HTTP/1.1 200 OK
+	Server: Apache
+	ETag: "8a8d7e39863ada67743107516e59eeef:1452509021"
+	Last-Modified: Mon, 11 Jan 2016 10:43:41 GMT
+	Accept-Ranges: bytes
+	Content-Length: 45832
+	Content-Type: image/jpeg
+	Cache-Control: max-age=2592000
+	Expires: Mon, 18 Apr 2016 15:39:18 GMT
+	Date: Sat, 19 Mar 2016 15:39:18 GMT
+	Connection: keep-alive
+	</pre>
+
+    <hr>
+
+    <h2>headeri za js</h2>
+    <h4>request headeri:</h4>
+    <pre>
+	GET /jquery-2.2.1.min.js HTTP/1.1
+	Host: code.jquery.com
+	Connection: keep-alive
+	Accept: */*
+	User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+	Accept-Encoding: gzip, deflate, sdch
+	Accept-Language: en-US,en;q=0.8,hr;q=0.6,ja;q=0.4,sr;q=0.2
+	If-None-Match: "56cb5d7c-14e7e"
+	If-Modified-Since: Mon, 22 Feb 2016 19:11:56 GMT
+	</pre>
+    <h4>response headeri:</h4>
+    <pre>
+	HTTP/1.1 200 OK
+	Date: Sat, 19 Mar 2016 14:39:36 GMT
+	Last-Modified: Mon, 22 Feb 2016 19:11:56 GMT
+	Vary: Accept-Encoding
+	ETag: "56cb5d7c-14e7e"
+	Expires: Thu, 31 Dec 2037 23:55:55 GMT
+	Cache-Control: max-age=315360000, public
+	<p class="b">Access-Control-Allow-Origin: *</p>
+	Server: NetDNA-cache/2.2
+	Content-Type: application/javascript; charset=utf-8
+	Content-Encoding: gzip
+	X-Cache: HIT
+	Content-Length: 34929
+	Connection: keep-alive
+	Accept-Ranges: bytes
+	</pre>
+
+	<hr>
+
+	<h2>Response headeri za nasumičan fajl:</h2>
+	<pre id="dlResponse">
+	Response headeri će se pojaviti ovde
+	</pre>
+
+
+	Unesi URL fajla ovde:
+	<input id="resUrl" type="text" size="100" 
+		placeholder=" na primer: http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<button id="btn"type="button">Click Me!</button><br>
+	
+	<p>
+	<small>
+		Napomena: Pošto se fajlovi dohvataju preko AJAX poziva koji u stvari koristi
+		XMLHttpRequest objekat, a kojim se samo može slati zahtev ka stranicama koje
+		su na istom domenu kao stranica koja šalje zahtev, nismo u mogućnosti da
+		dohvatimo većinu fajlova. Možemo dohvatiti recimo jquery skript kao i 
+		bootstrap css fajl koje je ova stranica učitala; primetimo liniju obojenu
+		u crveno u njihovom response headeru. Kao rezultat dobićemo samo simple headere.
+		<br>
+		<a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">
+			Cross-origin resource sharing
+		</a>
+		<br>
+		Još na temu ovoga 	
+		<a href="http://stackoverflow.com/a/20035319">
+			ovde
+		</a>
+		<a href="http://stackoverflow.com/a/10636765">
+			i ovde
+		</a>
+	</small>
+	</p>
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script>
+        console.log("test");
+
+		$(document).ready(function(){
+			$("#btn").click(function(){
+				$.ajax({
+					url: $("#resUrl").val(),
+					type: "HEAD",
+					success: function(res, status, xhr){
+						$("#dlResponse").html(xhr.getAllResponseHeaders());
+					},
+					error: function(jqXHR, textStatus, errorThrown){
+						$("#dlResponse").html(textStatus);
+					}
+				});
+			}); 
+		});
+    </script>
+</body>
+
+</html>
