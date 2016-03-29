@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Vezba 2 - Djordje Stojicevic</title>
+    <meta name="author" content="Ime autora">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/domaci.css" type="text/css">
+      <style>
+      body {
+        margin: 0px 20px 10px 20px;
+      }
+        img {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <img src="slike/slika1.jpg" alt="japan" width="400px" height="400px"><center><p>Interna slika</p></center>
+    <img src="http://us.jnto.go.jp/blog//wp-content/uploads/2007/02/osakajo-castle.jpg" alt="dvorac" width="400px" height="400px"><center><p>Eksterna slika</p></center>
+
+    <hr>
+
+    <h2><b>Headeri za CSS:</b></h2>
+    <h4>Request headeri:</h4>
+    <pre class="ivica">GET /bootstrap/3.3.6/css/bootstrap.min.css HTTP/1.1
+Host: maxcdn.bootstrapcdn.com
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8</pre>
+    <h4>Response headeri:</h4>
+    <pre>HTTP/1.1 200 OK
+Date: Sun, 20 Mar 2016 18:15:50 GMT
+Content-Type: text/css
+Transfer-Encoding: chunked
+Connection: keep-alive
+Last-Modified: Tue, 24 Nov 2015 19:49:46 GMT
+ETag: W/"2f624089c65f12185e79925bc5a7fc42"
+Server: NetDNA-cache/2.2
+Expires: Wed, 15 Mar 2017 18:15:50 GMT
+Cache-Control: max-age=31104000
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+X-Hello-Human: You should work for us! Email: jdorfman+theheader@maxcdn.com or @MaxCDNDeveloper on Twitter
+X-Cache: HIT
+Content-Encoding: gzip</pre>
+
+    <hr>
+
+    <h2><b>Headeri za slike:</b></h2>
+    <h4>Request headeri:</h4>
+    <pre class="ivica">GET /blog//wp-content/uploads/2007/02/osakajo-castle.jpg HTTP/1.1
+Host: us.jnto.go.jp
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Accept: image/webp,image/*,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8</pre>
+    <h4>Response headeri:</h4>
+    <pre>HTTP/1.1 200 OK
+Date: Sun, 20 Mar 2016 18:20:02 GMT
+Server: Apache
+Last-Modified: Wed, 28 Aug 2013 01:53:49 GMT
+ETag: "11613-4e4f842b4a540"
+Accept-Ranges: bytes
+Content-Length: 71187
+Keep-Alive: timeout=2, max=300
+Connection: Keep-Alive
+Content-Type: image/jpeg</pre>
+
+    <hr>
+
+    <h2><b>Headeri za JS:<b></h2>
+    <h4>Request headeri:</h4>
+    <pre class="ivica">GET /jquery-2.2.1.min.js HTTP/1.1
+Host: code.jquery.com
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8</pre>
+    <h4>Response headeri:</h4>
+    <pre>HTTP/1.1 200 OK
+Date: Sun, 20 Mar 2016 18:15:49 GMT
+Last-Modified: Mon, 22 Feb 2016 19:11:56 GMT
+Vary: Accept-Encoding
+ETag: "56cb5d7c-14e7e"
+Expires: Thu, 31 Dec 2037 23:55:55 GMT
+Cache-Control: max-age=315360000, public
+Access-Control-Allow-Origin: *
+Server: NetDNA-cache/2.2
+Content-Type: application/javascript; charset=utf-8
+Content-Encoding: gzip
+X-Cache: HIT
+Content-Length: 34929
+Connection: keep-alive
+Accept-Ranges: bytes</pre>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script>
+        console.log("test");
+    </script>
+</body>
+
+</html>
